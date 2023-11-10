@@ -1,6 +1,4 @@
-html{
-    max-width: 375px;
-}
-h1{
-    color: red;
-}
+@import "variables";
+@import "mixins";
+
+
