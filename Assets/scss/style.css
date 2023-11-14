@@ -77,13 +77,15 @@ nav input {
   border: 0;
   color: white;
 }
+
 .fonction {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
-.fonction h1 {
+.fonction h2 {
   padding-top: 48px;
+  padding-left: 20px;
 }
 .fonction ul {
   display: flex;
@@ -142,6 +144,4 @@ nav input {
   font-family: "roboto";
   font-size: 16px;
   font-weight: 500;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
