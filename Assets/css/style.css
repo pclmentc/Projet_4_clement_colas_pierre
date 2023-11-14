@@ -111,7 +111,7 @@ nav input {
   background: var(--Background, #F6F6F6);
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
@@ -119,11 +119,11 @@ footer {
   padding-top: 22px;
   color: white;
 }
-footer h2 {
+.footer h2 {
   font-family: "Shrikhand", sans-serif;
   margin: 0;
 }
-footer ul {
+.footer ul {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -131,10 +131,17 @@ footer ul {
   padding: 0;
   gap: 7px;
 }
-footer ul li {
+.footer ul li {
   display: flex;
   flex-direction: row;
   gap: 11px;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
