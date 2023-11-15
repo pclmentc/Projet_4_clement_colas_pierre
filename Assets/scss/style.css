@@ -5,17 +5,16 @@ body {
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 body h1 {
-  font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  margin: 0;
   font-style: normal;
   line-height: normal;
+  margin: 0;
 }
 body p {
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   margin: 0;
 }
@@ -50,10 +49,12 @@ nav input {
 .reservation {
   display: flex;
   flex-direction: column;
+  background-color: #f6f6f6;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding-top: 39px;
+  padding-bottom: 57px;
 }
 .reservation h1 {
   width: 275px;
@@ -70,6 +71,7 @@ nav input {
   width: 218px;
   height: 50px;
   flex-shrink: 0;
+  font-size: 16px;
   border-radius: 25px;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
   /* Shadow/Button */
@@ -96,13 +98,12 @@ nav input {
 .fonction ul li {
   display: flex;
   flex-direction: row;
+  background-color: #f6f6f6;
   border-radius: 20px;
-  background: var(--Background, #f6f6f6);
   height: 72px;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-around;
-  /* Shadow/Instructions */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -110,16 +111,47 @@ nav input {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  background: var(--Background, #F6F6F6);
+  background-color: #f6f6f6;
+}
+.resto .card {
+  border: solid white 1px;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: white;
+}
+.resto .card h2 {
+  padding-left: 13px;
+  margin-bottom: 5px;
+}
+.resto .card p {
+  padding-left: 13px;
+}
+.resto .card button {
+  border: 0;
+  background-color: white;
+}
+.resto .card .iconeCoeur {
+  width: 22px;
+  height: 21px;
+  flex-shrink: 0;
+}
+.resto .card .imgcard {
+  box-sizing: border-box;
+  width: 100%;
+  height: 231px;
+  flex-shrink: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
+  color: #f6f6f6;
   padding: 25px;
   padding-top: 22px;
-  color: white;
 }
 .footer h2 {
   font-family: "Shrikhand", sans-serif;
@@ -127,8 +159,8 @@ nav input {
 }
 .footer ul {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-start;
   list-style-type: none;
   padding: 0;
   gap: 7px;
@@ -139,9 +171,8 @@ nav input {
   gap: 11px;
 }
 .footer ul li a {
-  color: white;
   text-decoration: none;
-  font-family: "roboto";
   font-size: 16px;
   font-weight: 500;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

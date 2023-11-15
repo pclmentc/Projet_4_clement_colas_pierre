@@ -1,0 +1,76 @@
+@mixin font {
+  font-family: "Roboto", sans-serif;
+}
+@mixin title {
+  font-family: "Shrikhand", sans-serif;
+}
+@mixin button {
+  margin-top: 27px;
+  width: 218px;
+  height: 50px;
+  flex-shrink: 0;
+  font-size: 16px;
+  border-radius: 25px;
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
+  /* Shadow/Button */
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: 0;
+  color: white;
+}
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin grey {
+  background: var(--Grey-2, #eaeaea);
+}
+@mixin fond {
+  background-color: #f6f6f6;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+@mixin footer {
+  background-color: #353535;
+  color: #f6f6f6;
+}
+@mixin card {
+  border: solid white 1px;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  h2 {
+    padding-left: 13px;
+    margin-bottom: 5px;
+  }
+  p {
+    padding-left: 13px;
+  }
+  button {
+    border: 0;
+    background-color: white;
+  }
+  .iconeCoeur {
+    width: 22px;
+    height: 21px;
+    flex-shrink: 0;
+  }
+  .imgcard {
+    box-sizing: border-box;
+    width: 100%;
+    height: 231px;
+    flex-shrink: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}

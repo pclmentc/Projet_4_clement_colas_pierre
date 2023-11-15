@@ -8,38 +8,34 @@ body {
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  @include font;  
+
   h1 {
-    font-family: "Roboto", sans-serif;
     font-size: 24px;
-    font-weight: 700;
-    margin: 0;
+    font-weight: 700;    
     font-style: normal;
     line-height: normal;
+    margin: 0;
   }
 
   p {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    margin: 0;
+    font-size: 18px; 
+    margin: 0;   
   }
 }
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include column;
+  @include center;
   #Logo {
     margin-top: 14px;
     margin-bottom: 13px;
   }
 }
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include row;
+  @include center;
   gap: 17px;
-  background: var(--Grey-2, #eaeaea);
+  @include grey;
   height: 50px;
   input {
     font-size: 16px;
@@ -49,106 +45,89 @@ nav {
   }
 }
 .reservation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include column;
+  @include fond;
+  @include center;
   text-align: center;
   padding-top: 39px;
+  padding-bottom: 57px;
+  
 
   h1 {
     width: 275px;
     height: 68px;
-    flex-shrink: 0;
+    flex-shrink: 0;    
   }
 
   p {
     width: 315px;
     height: 46px;
-    flex-shrink: 0;
-  }
+    flex-shrink: 0;      
+  } 
 
   button {
-    margin-top: 27px;
-    width: 218px;
-    height: 50px;
-    flex-shrink: 0;
-    border-radius: 25px;
-    background: var(
-      --Button-Gradient,
-      linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
-    );
-    /* Shadow/Button */
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border: 0;
-    color: white;    
+    @include button;
   }
 }
-.fonction {  
-  display: flex;
-  flex-direction: column;
+
+.fonction {
+  @include column;
   box-sizing: border-box;
   h2 {
-    padding-top: 48px; 
+    padding-top: 48px;
     padding-left: 20px;
-
   }
   ul {
-    display: flex;
-    flex-direction: column;
+    @include column;
     gap: 25px;
     padding: 25px;
     li {
-      display: flex;
-      flex-direction: row;      
-      border-radius: 20px;
-      background: var(--Background, #f6f6f6);      
+      @include row;
+      @include fond;
+      border-radius: 20px;      
       height: 72px;
-      flex-shrink: 0; 
+      flex-shrink: 0;
       align-items: center;
-      justify-content: space-around;     
-      /* Shadow/Instructions */
+      justify-content: space-around;      
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     }
-    
   }
 }
-.resto{
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    background: var(--Background, #F6F6F6);
+.resto {
+  padding: 25px;
+  @include column;
+  @include fond;
+  .card{
+    @include card;
+    background-color: white;
+  }
 }
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color:  #353535;
-    padding: 25px;
-    padding-top: 22px;
-    color: white;
-    h2{
-        font-family:"Shrikhand",sans-serif ;
-        margin: 0;
+.footer {
+  @include column; 
+  @include footer; 
+  padding: 25px;
+  padding-top: 22px;
+  
+  h2 {
+    @include title;
+    margin: 0;
+  }
+  ul {
+    @include column;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    gap: 7px;
+    li {
+      @include row;
+      gap: 11px;
+      a {        
+        text-decoration: none;        
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
     }
-    ul{
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0;
-        gap: 7px;
-        li{
-            display: flex;
-            flex-direction: row;
-            gap: 11px;
-            a{
-                color: white;
-                text-decoration: none;
-                font-family: "roboto";
-                font-size: 16px;
-                font-weight: 500;
-            }
-        }
-    }
+  }
 }
