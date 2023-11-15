@@ -19,6 +19,15 @@ body p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   display: flex;
   flex-direction: column;
