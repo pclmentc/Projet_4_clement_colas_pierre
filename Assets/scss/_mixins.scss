@@ -46,8 +46,7 @@
 @mixin card {
   border: solid white 1px;
   background-color: #f6f6f6;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;  
 
   h2 {
     padding-left: 13px;
@@ -59,8 +58,11 @@
   button {
     border: 0;
     background-color: white;
+    position: relative;  
+    left: 275px;  
+    bottom: 46px;
   }
-  .iconeCoeur {
+  .iconeCoeur {    
     width: 22px;
     height: 21px;
     flex-shrink: 0;
@@ -68,6 +70,7 @@
   .imgcard {
     box-sizing: border-box;
     width: 100%;
+    object-fit: cover;
     height: 231px;
     flex-shrink: 0;
     border-top-left-radius: 15px;
