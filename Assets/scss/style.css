@@ -83,7 +83,6 @@ nav input {
   font-size: 16px;
   border-radius: 25px;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
-  /* Shadow/Button */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: 0;
   color: white;
@@ -97,12 +96,16 @@ nav input {
 .fonction h2 {
   padding-top: 48px;
   padding-left: 20px;
+  margin: 0;
+  padding-bottom: 1px;
 }
 .fonction ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 25px;
+  padding-bottom: 68px;
+  margin: 0;
 }
 .fonction ul .contenant {
   position: relative;
@@ -128,21 +131,31 @@ nav input {
 }
 
 .resto {
-  gap: 18px;
-  padding: 25px;
+  gap: 6px;
+  padding: 18px;
+  padding-bottom: 68px;
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
 }
+.resto h2 {
+  padding-left: 13px;
+}
+.resto h3 {
+  padding-left: 13px;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 16px;
+}
+.resto p {
+  font-size: 17px;
+  padding-top: 5px;
+}
 .resto .card {
-  border: solid white 1px;
   background-color: #f6f6f6;
   border-radius: 15px;
   background-color: white;
-}
-.resto .card h2 {
-  padding-left: 13px;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 .resto .card p {
   padding-left: 13px;
@@ -166,8 +179,8 @@ nav input {
      object-fit: cover;
   height: 231px;
   flex-shrink: 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border: 0 solid transparent;
+  border-radius: 15px;
 }
 
 .footer {

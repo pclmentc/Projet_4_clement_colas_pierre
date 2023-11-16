@@ -58,7 +58,7 @@ nav {
   @include center;
   text-align: center;
   padding-top: 39px;
-  padding-bottom: 57px;
+  padding-bottom: 57px; 
   
 
   h1 {
@@ -84,11 +84,15 @@ nav {
   h2 {
     padding-top: 48px;
     padding-left: 20px;
+    margin: 0;
+    padding-bottom: 1px;
   }
   ul {
     @include column;
     gap: 25px;
-    padding: 25px;  
+    padding: 25px;
+    padding-bottom: 68px;  
+    margin: 0;
     .contenant{
       position: relative;
       height: 24px;
@@ -115,14 +119,31 @@ nav {
   }
 }
 .resto {
-  gap: 18px;
-  padding: 25px;
+  gap: 6px;
+  padding: 18px;
+  padding-bottom: 68px;
   @include column;
   @include fond;
+  
+  h2{
+    padding-left: 13px;
+    
+  }
+  h3{
+    padding-left: 13px;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 16px;
+  }
+  p{
+    font-size: 17px;
+    padding-top: 5px;
+  }
   .card{
     @include card;
     background-color: white;
-  }  
+    margin-bottom: 12px;
+  }    
 }
 
 .footer {

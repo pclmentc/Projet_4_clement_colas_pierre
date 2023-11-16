@@ -14,8 +14,7 @@
   background: var(
     --Button-Gradient,
     linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
-  );
-  /* Shadow/Button */
+  );  
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: 0;
   color: white;
@@ -43,15 +42,9 @@
   background-color: #353535;
   color: #f6f6f6;
 }
-@mixin card {
-  border: solid white 1px;
+@mixin card {  
   background-color: #f6f6f6;
-  border-radius: 15px;  
-
-  h2 {
-    padding-left: 13px;
-    margin-bottom: 5px;
-  }
+  border-radius: 15px;   
   p {
     padding-left: 13px;
   }
@@ -62,7 +55,7 @@
     left: 275px;  
     bottom: 46px;
   }
-  .iconeCoeur {    
+  .iconeCoeur {      
     width: 22px;
     height: 21px;
     flex-shrink: 0;
@@ -73,7 +66,7 @@
     object-fit: cover;
     height: 231px;
     flex-shrink: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border: 0 solid transparent;
+    border-radius: 15px;
   }
 }
