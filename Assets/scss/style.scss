@@ -2,8 +2,7 @@
 @import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
-body {
-  max-width: 375px;
+body {  
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -94,6 +93,8 @@ nav {
 
   button {
     @include button;
+    cursor: pointer;   
+    
   }
 }
 
