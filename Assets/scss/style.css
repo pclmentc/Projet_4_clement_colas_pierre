@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.imgcard {
+  box-sizing: border-box;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 231px;
+  flex-shrink: 0;
+  border: 0 solid transparent;
+  border-radius: 15px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -107,7 +118,11 @@ nav input {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: 0;
   color: white;
+  transition: 1s;
   cursor: pointer;
+}
+.reservation button:hover {
+  filter: brightness(1.35);
 }
 
 .fonction {
@@ -159,6 +174,8 @@ nav input {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
+  /* :checked + :hover + :before */
+  /* :not(:checked) + :hover + :before */
 }
 .resto h2 {
   padding-left: 13px;
@@ -176,6 +193,7 @@ nav input {
 .resto .card {
   background-color: #f6f6f6;
   border-radius: 15px;
+  position: relative;
   background-color: white;
   margin-bottom: 12px;
 }
@@ -186,37 +204,64 @@ nav input {
   border: 0;
   background-color: white;
   position: relative;
-  left: 275px;
+  left: 85%;
   bottom: 46px;
   cursor: pointer;
 }
-.resto .card .iconeCoeur {
+.resto .new {
+  display: flex;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  left: 65%;
+  top: 5%;
   position: absolute;
-  width: 22px;
-  height: 21px;
-  flex-shrink: 0;
-  opacity: 1;
 }
-.resto .card .iconeCoeurFull {
+.resto .heart {
+  position: relative;
+  bottom: 35px;
+  left: 80%;
+}
+.resto .heart input {
+  display: none;
+}
+.resto .heart input:checked + label:hover:before {
+  content: "";
   position: absolute;
-  width: 22px;
-  height: 21px;
-  flex-shrink: 0;
-  opacity: 0;
-  transition: opacity 2s;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
-.resto .card .iconeCoeurFull:hover {
-  opacity: 1;
+.resto .heart input:not(:checked) + label:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
-.resto .card .imgcard {
-  box-sizing: border-box;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 231px;
-  flex-shrink: 0;
-  border: 0 solid transparent;
-  border-radius: 15px;
+.resto .heart input:not(:checked) + label > img.uncheck {
+  display: block;
+}
+.resto .heart input:checked + label > img.uncheck {
+  display: none;
+}
+.resto .heart input:not(:checked) + label > img.check {
+  display: none;
+}
+.resto .heart input:checked + label > img.check {
+  display: block;
 }
 
 .footer {

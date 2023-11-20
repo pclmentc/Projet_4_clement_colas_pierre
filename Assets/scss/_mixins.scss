@@ -15,7 +15,13 @@
     $Button-Gradient;  
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: 0;
-  color: white;  
+  color: white; 
+  transition: 1s;
+  &:hover{    
+    filter: brightness(1.35);
+    
+    // background: linear-gradient(193deg, lighten($color: #9356dc,$amount: 5) -11.44%, lighten($color: #ff79da, $amount: 5) 123.93%)
+  } 
   }  
 
 @mixin row {
@@ -43,7 +49,8 @@
 }
 @mixin card {  
   background-color: #f6f6f6;
-  border-radius: 15px;   
+  border-radius: 15px;  
+  position: relative; 
   p {
     padding-left: 13px;
   }
@@ -51,32 +58,10 @@
     border: 0;
     background-color: white;
     position: relative;  
-    left: 275px;  
+    left: 85%;  
     bottom: 46px;
     cursor: pointer;
-  }
-  .iconeCoeur {  
-    position: absolute;    
-    width: 22px;
-    height: 21px;
-    flex-shrink: 0;      
-    opacity: 1; 
-    
-    
-    
-  }
-  .iconeCoeurFull{
-    position: absolute;
-    width: 22px;
-    height: 21px;
-    flex-shrink: 0;      
-    opacity: 0;
-    transition: opacity 2s;
-    &:hover{
-      opacity: 1;
-      
-      
-    }
+  }  
   }
   .imgcard {
     box-sizing: border-box;
@@ -87,4 +72,19 @@
     border: 0 solid transparent;
     border-radius: 15px;
   }
+
+@mixin new{
+  display: flex;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  left: 65%;
+  top: 5%;
+  
 }
