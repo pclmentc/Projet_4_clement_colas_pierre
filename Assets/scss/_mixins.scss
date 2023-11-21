@@ -48,9 +48,9 @@
   color: #f6f6f6;
 }
 @mixin card {  
-  background-color: #f6f6f6;
-  border-radius: 15px;  
-  position: relative; 
+  background-color: #f6f6f6;    
+  position: relative;
+  border-radius: 15px;
   p {
     padding-left: 13px;
   }
@@ -70,7 +70,8 @@
     height: 231px;
     flex-shrink: 0;
     border: 0 solid transparent;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 
 @mixin new{
@@ -84,7 +85,9 @@
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  left: 65%;
+  left: 71%;
   top: 5%;
-  
+  @media screen and (min-width:915px) {
+    left: 86%;
+  }
 }
