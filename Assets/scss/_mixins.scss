@@ -3,6 +3,10 @@
 }
 @mixin title {
   font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 @mixin button {
   margin-top: 27px;
