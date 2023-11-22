@@ -1,6 +1,8 @@
 @import "variables";
 @import "mixins";
+@import "page";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
 
 body {  
   margin: 0;
@@ -147,7 +149,7 @@ nav {
 .resto {
   gap: 6px;
   padding: 18px;
-  padding-bottom: 68px;
+  padding-bottom: 66px;
   @include column;
   @include fond;
   @media screen and (min-width: 915px){
@@ -157,7 +159,7 @@ nav {
   h2{
     padding-left: 13px;
     @media screen and (min-width: 915px){
-      padding-left: 11%;}
+      padding-left: 10%;}
   }
   h3{
     padding-left: 13px;
@@ -305,9 +307,10 @@ nav {
     
     ul{
       flex-direction: row;
+      gap: 25px;
     }
     .footer__title{
-      padding-right: 25px;
+      padding-inline: 25px;
     }
   }
    
