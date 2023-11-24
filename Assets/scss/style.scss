@@ -170,6 +170,7 @@ nav {
   p{
     font-size: 17px;
     padding-top: 5px;
+    padding-bottom: 12px;
   }
   .card{
     @include card;
@@ -198,9 +199,9 @@ nav {
     position: absolute
   }      
   .heart {
-    position: relative;
-    bottom: 35px;
-    left: 86%;   
+    position: absolute;
+    bottom: 27px;
+    left: 86%;  
     @media screen and (min-width:915px){
       bottom: 32px;
       left: 89%;
