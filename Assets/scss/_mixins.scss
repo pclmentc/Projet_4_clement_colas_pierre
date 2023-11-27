@@ -91,7 +91,22 @@
   align-items: center;
   left: 71%;
   top: 5%;
-  @media screen and (min-width:915px) {
+  @media screen and (min-width:424px) {
     left: 86%;
+  }
+  @media screen and (min-width:425px) {
+    left: 75%;
+  }
+  @media screen and (min-width:767px) {
+    left: 87%;
+  }
+  @media screen and (min-width:1023px) {
+    left: 64%;
+  }
+  @media screen and (min-width:1439px) {
+    left: 79%;
+  }
+  @media screen and (min-width:1440px) {
+    left: 90%;
   }
 }

@@ -428,9 +428,34 @@ nav input {
   top: 5%;
   position: absolute;
 }
-@media screen and (min-width: 915px) {
+@media screen and (min-width: 424px) {
   .resto .new {
     left: 86%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .resto .new {
+    left: 75%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .resto .new {
+    left: 87%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .resto .new {
+    left: 64%;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .resto .new {
+    left: 79%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .resto .new {
+    left: 90%;
   }
 }
 .resto .heart {
