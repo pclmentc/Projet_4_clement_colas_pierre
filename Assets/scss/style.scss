@@ -8,8 +8,9 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  box-sizing: border-box;
-  @include font;  
+  box-sizing: border-box;  
+  @include font; 
+   
 
   h1 {
     font-size: 24px;
@@ -156,10 +157,9 @@ nav {
     padding-bottom: 30px;
   }
   
-  h2{
-    padding-left: 13px;
+  h2{    
     @media screen and (min-width: 915px){
-      padding-left: 10%;}
+      padding-left: 13%;}
   }
   h3{
     padding-left: 13px;
@@ -201,7 +201,8 @@ nav {
   .heart {
     position: absolute;
     bottom: 27px;
-    left: 86%;  
+    left: 86%; 
+    
     @media screen and (min-width:915px){
       bottom: 32px;
       left: 89%;
@@ -221,9 +222,8 @@ nav {
     width: 100px;
     height: 100px;
     line-height: 100px;
-    text-align: center;
-    
-  }
+    text-align: center;    
+    }
   
   /* :not(:checked) + :hover + :before */
   .heart input:not(:checked) + label:hover:before {
@@ -234,8 +234,7 @@ nav {
     width: 100px;
     height: 100px;
     line-height: 100px;
-    text-align: center;
-    
+    text-align: center;     
   }
   
   .heart input:not(:checked) + label > img.uncheck{
@@ -286,16 +285,16 @@ nav {
   .reservation h1{
     font-size: 40px;
   }
+  .fonction{
+    padding-left: 180px;
+  }
   .fonction ul  {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 37px;  
       
-  }
-  .fonction h2{
-    padding-left: 11%;
-  }
+  }  
   
   .fonction li{
     width: 25%;

@@ -359,12 +359,9 @@ nav input {
     padding-bottom: 30px;
   }
 }
-.resto h2 {
-  padding-left: 13px;
-}
 @media screen and (min-width: 915px) {
   .resto h2 {
-    padding-left: 10%;
+    padding-left: 13%;
   }
 }
 .resto h3 {
@@ -453,7 +450,7 @@ nav input {
     left: 79%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1445px) {
   .resto .new {
     left: 90%;
   }
@@ -545,14 +542,14 @@ nav input {
   .reservation h1 {
     font-size: 40px;
   }
+  .fonction {
+    padding-left: 180px;
+  }
   .fonction ul {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 37px;
-  }
-  .fonction h2 {
-    padding-left: 11%;
   }
   .fonction li {
     width: 25%;

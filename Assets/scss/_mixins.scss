@@ -22,8 +22,7 @@
   color: white; 
   transition: 300ms;
   &:hover{    
-    filter: brightness(1.35);
-    
+    filter: brightness(1.35);    
     // background: linear-gradient(193deg, lighten($color: #9356dc,$amount: 5) -11.44%, lighten($color: #ff79da, $amount: 5) 123.93%)
   } 
   }  
@@ -106,7 +105,7 @@
   @media screen and (min-width:1439px) {
     left: 79%;
   }
-  @media screen and (min-width:1440px) {
+  @media screen and (min-width:1445px) {
     left: 90%;
   }
 }
