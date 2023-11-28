@@ -20,6 +20,7 @@
   font-weight: 300;
   text-transform: uppercase;
   position: relative;
+  animation: effet 1s forwards;
 }
 .entreeHeart h3::after {
   content: "";
@@ -30,6 +31,7 @@
   position: absolute;
   left: 17px;
   bottom: -7px;
+  animation: effet 2s both;
 }
 
 .encadrement {
@@ -77,6 +79,7 @@
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   gap: 5px;
+  animation: effet 3s forwards;
   h4 {
     padding: 0;
     margin: 0;
@@ -134,4 +137,16 @@
 }
 .heartP input:checked + label > img.check {
   display: block;
+}
+
+@keyframes effet{
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+}
+
+100% {
+    transform: translatey(0px);
+    opacity: 100%;
+}
 }

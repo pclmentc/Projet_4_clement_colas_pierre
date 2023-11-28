@@ -14,7 +14,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f6f6f6;
+  background: #000000be;   
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@ body {
   position: relative;
   width: 135px;
   height: 135px; 
-  right: 5px; 
+  right: 5px;   
 }
 
 .loader::before,
