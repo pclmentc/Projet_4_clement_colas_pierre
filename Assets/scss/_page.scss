@@ -113,6 +113,7 @@
   }
   .prix {
     font-weight: 700;
+    text-overflow: inherit;
   }
   p {
     overflow: hidden;
@@ -162,17 +163,6 @@
   display: block;
 }
 
-@keyframes effet{
-  0% {
-    transform: translatey(20px);
-    opacity: 0%;
-}
-
-100% {
-    transform: translatey(0px);
-    opacity: 100%;
-}
-}
 @media screen and (min-width:1440px) {
   .encadrement{
   width: 1055px;  

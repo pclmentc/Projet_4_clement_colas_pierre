@@ -1,7 +1,9 @@
 @import "variables";
 @import "mixins";
 @import "page";
+@import "keyframes";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
 /**loader**/
 body {
   margin: 0;
@@ -73,23 +75,6 @@ body {
   text-decoration: underline;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 /**fin loader**/
 
 body {

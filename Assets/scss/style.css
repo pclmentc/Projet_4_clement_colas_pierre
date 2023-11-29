@@ -161,6 +161,7 @@
 }
 .bisCard .prix {
   font-weight: 700;
+  text-overflow: inherit;
 }
 .bisCard p {
   overflow: hidden;
@@ -213,16 +214,6 @@
   display: block;
 }
 
-@keyframes effet {
-  0% {
-    transform: translatey(20px);
-    opacity: 0%;
-  }
-  100% {
-    transform: translatey(0px);
-    opacity: 100%;
-  }
-}
 @media screen and (min-width: 1440px) {
   .encadrement {
     width: 1055px;
@@ -291,6 +282,33 @@
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes effet {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
 /**loader**/
 body {
   margin: 0;
@@ -363,23 +381,6 @@ body {
   text-decoration: underline;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 /**fin loader**/
 body {
   margin: 0;
