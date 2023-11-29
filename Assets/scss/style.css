@@ -175,6 +175,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.bisCard .cardCheck {
+  display: flex;
+}
 
 .heartP input {
   display: none;
@@ -309,14 +312,6 @@
     opacity: 100%;
   }
 }
-@keyframes coeur {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -343,7 +338,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  animation: fadeOut 0.2s 3s forwards;
+  animation: fadeOut 2s 3s forwards;
 }
 
 .loader {

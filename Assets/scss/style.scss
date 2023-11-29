@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  animation: fadeOut 0.2s 3s forwards;
+  animation: fadeOut 2s 3s forwards;
 }
 
 .loader {
@@ -276,8 +276,7 @@ nav {
     }
   }
   .heart input {
-    display: none;
-    
+    display: none;    
   }  
   .heart input:checked + label:hover:before {
     content: "";
@@ -288,7 +287,7 @@ nav {
     height: 21px;
     line-height: 100px;
     text-align: center;
-        
+      
   }  
   .heart input:not(:checked) + label:hover:before {
     content: "";
@@ -298,7 +297,8 @@ nav {
     width: 22px;
     height: 21px;
     line-height: 100px;
-    text-align: center;    
+    text-align: center; 
+      
   }
 
   .heart input:not(:checked) + label > img.uncheck {
