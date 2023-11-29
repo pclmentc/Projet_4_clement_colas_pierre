@@ -4,7 +4,7 @@
 @import "keyframes";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
-/**loader**/
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -17,7 +17,7 @@ body {
   max-width: 1440px;
   margin: auto;
 }
-
+/**loader**/
 .loader-container {
   position: fixed;
   top: 0;
@@ -74,7 +74,6 @@ body {
   z-index: 1;
   text-decoration: underline;
 }
-
 /**fin loader**/
 
 body {
@@ -276,33 +275,30 @@ nav {
       left: 89%;
     }
   }
-
   .heart input {
     display: none;
-  }
-
-  /* :checked + :hover + :before */
+    
+  }  
   .heart input:checked + label:hover:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 22px;
+    height: 21px;
     line-height: 100px;
     text-align: center;
-  }
-
-  /* :not(:checked) + :hover + :before */
+        
+  }  
   .heart input:not(:checked) + label:hover:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 22px;
+    height: 21px;
     line-height: 100px;
-    text-align: center;
+    text-align: center;    
   }
 
   .heart input:not(:checked) + label > img.uncheck {

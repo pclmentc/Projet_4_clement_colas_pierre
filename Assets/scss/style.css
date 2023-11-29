@@ -184,8 +184,8 @@
 .heartP input:checked + label:hover:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 22px;
+  height: 21px;
   text-align: center;
 }
 
@@ -193,8 +193,8 @@
 .heartP input:not(:checked) + label:hover:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 22px;
+  height: 21px;
   text-align: center;
 }
 
@@ -309,7 +309,14 @@
     opacity: 100%;
   }
 }
-/**loader**/
+@keyframes coeur {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -324,6 +331,7 @@ body {
   margin: auto;
 }
 
+/**loader**/
 .loader-container {
   position: fixed;
   top: 0;
@@ -556,8 +564,6 @@ nav input {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-  /* :checked + :hover + :before */
-  /* :not(:checked) + :hover + :before */
 }
 @media screen and (min-width: 915px) {
   .resto {
@@ -679,8 +685,8 @@ nav input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 22px;
+  height: 21px;
   line-height: 100px;
   text-align: center;
 }
@@ -689,8 +695,8 @@ nav input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 22px;
+  height: 21px;
   line-height: 100px;
   text-align: center;
 }
