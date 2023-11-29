@@ -11,6 +11,9 @@
   .retour{
     position: absolute;
     left: 15px;
+    @media screen and (min-width: 1441px) {
+      left: 565px;
+    }
   }
 }
 .imageIntro {

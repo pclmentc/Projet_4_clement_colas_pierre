@@ -27,6 +27,11 @@
   position: absolute;
   left: 15px;
 }
+@media screen and (min-width: 1441px) {
+  .conteneurP .retour {
+    left: 565px;
+  }
+}
 
 .imageIntro {
   display: flex;
@@ -290,6 +295,15 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .loader-container {
@@ -325,8 +339,8 @@ body {
 }
 
 .loader::before {
-  border-top-color: #99E2D0;
-  border-bottom-color: #99E2D0;
+  border-top-color: #99e2d0;
+  border-bottom-color: #99e2d0;
   animation-direction: reverse;
 }
 
@@ -339,7 +353,7 @@ body {
   position: absolute;
   font-size: 24px;
   font-weight: bold;
-  color: #9356DC;
+  color: #9356dc;
   text-align: center;
   width: 100%;
   top: 60%;
@@ -391,6 +405,11 @@ body .exemple {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 1440px) {
+  body .exemple {
+    height: 488px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -426,6 +445,11 @@ header #Logo {
 .page #LogoP {
   margin-top: 14px;
   margin-bottom: 13px;
+}
+@media screen and (min-width: 1440px) {
+  .page #LogoP {
+    margin-block: 30px;
+  }
 }
 
 nav {
