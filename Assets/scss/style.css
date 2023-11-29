@@ -17,9 +17,21 @@
   text-decoration: none;
 }
 
+.conteneurP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.conteneurP .retour {
+  position: absolute;
+  left: 15px;
+}
+
 .imageIntro {
   display: flex;
   position: relative;
+  z-index: 1;
 }
 
 .entreeHeart {
@@ -55,14 +67,15 @@
 .encadrement {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   background-color: #f6f6f6;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   box-sizing: border-box;
   width: 100%;
-  top: 262px;
+  top: -43px;
   gap: 40px;
+  z-index: 2;
 }
 .encadrement button {
   margin-top: 27px;
@@ -88,7 +101,7 @@
 .encadrement .commander {
   display: flex;
   justify-content: center;
-  padding-block: 40px;
+  padding-bottom: 40px;
 }
 
 .titreHeart {
@@ -97,6 +110,12 @@
   align-items: center;
   justify-content: space-around;
   padding-top: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .titreHeart {
+    justify-content: center;
+    gap: 24px;
+  }
 }
 .titreHeart h2 {
   font-family: "Shrikhand", sans-serif;
@@ -110,6 +129,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .cardBis {
+    padding-inline: 210px;
+  }
 }
 
 .bisCard {
@@ -194,6 +218,74 @@
     opacity: 100%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .encadrement {
+    width: 1055px;
+    flex-shrink: 0;
+    margin: 0px 193px;
+  }
+  .encadrement .footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+}
+.footerP {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #f6f6f6;
+  position: relative;
+  padding: 25px;
+  padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: -42px;
+}
+.footerP h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+.footerP ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  gap: 7px;
+}
+.footerP ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+.footerP ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (min-width: 915px) {
+  .footerP {
+    flex-direction: row-reverse;
+    gap: 23px;
+    align-items: center;
+    padding: 30px;
+  }
+  .footerP ul {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .footerP .footer__title {
+    padding-inline: 25px;
+  }
+}
+
 /**loader**/
 body {
   margin: 0;
@@ -299,9 +391,6 @@ body .exemple {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .pp {
-  background-color: #f3f3f3;
-}
 
 a {
   text-decoration: none;
@@ -332,9 +421,6 @@ header #Logo {
 .page {
   display: flex;
   flex-direction: row;
-  gap: 42px;
-  padding-left: 17px;
-  justify-content: stretch;
   background-color: white;
 }
 .page #LogoP {
@@ -603,6 +689,9 @@ nav input {
   color: #f6f6f6;
   padding: 25px;
   padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
 }
 .footer h2 {
   font-family: "Shrikhand", sans-serif;
