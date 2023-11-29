@@ -177,6 +177,28 @@
 }
 .bisCard .cardCheck {
   display: flex;
+  flex: 0%;
+  height: 69px;
+  width: 59px;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  white-space: nowrap;
+  border-top-right-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+}
+.bisCard .fa-solid {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .heartP input {
