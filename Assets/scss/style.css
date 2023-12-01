@@ -142,14 +142,17 @@
 }
 
 .bisCard {
+  display: flex;
   margin-inline: 13px;
-  padding: 15px;
+  padding-left: 15px;
   border: 1px solide transparent;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  gap: 5px;
+  height: 69px;
+  overflow: hidden;
   animation: effet 3s forwards;
+  gap: 5px;
 }
 .bisCard h4 {
   padding: 0;
@@ -173,32 +176,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-weight: 700;
+  padding-right: 10px;
+}
+.bisCard .contenu {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  overflow: hidden;
+  transition: 400ms;
+  height: 100%;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 .bisCard .cardCheck {
   display: flex;
-  flex: 0%;
-  height: 69px;
-  width: 59px;
-  align-items: center;
   justify-content: center;
-  color: #f6f6f6;
-  background-color: #99e2d0;
-  white-space: nowrap;
-  border-top-right-radius: 20px 20px;
-  border-bottom-right-radius: 20px 20px;
+  align-items: center;
+  background: #99e2d0;
+  color: white;
+  transition: all 400ms;
+  overflow: hidden;
+  height: 69px;
+  width: 0;
 }
 .bisCard .fa-solid {
-  font-weight: 900;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.contenu {
+.bisCard:hover .cardCheck {
+  width: 75px;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .heartP input {

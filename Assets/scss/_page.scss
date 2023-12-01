@@ -93,22 +93,25 @@
     padding-inline: 210px;
   }
 }
-.bisCard {  
+.bisCard { 
+  display: flex; 
   margin-inline: 13px;
-  padding: 15px;
+  padding-left: 15px;
   border: 1px solide transparent;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  gap: 5px;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);  
+  height: 69px;
+  overflow: hidden;  
   animation: effet 3s forwards;
+  gap: 5px;
   h4 {
     padding: 0;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 18px;
+    font-size: 18px;    
   }
   .prix {
     font-weight: 700;
@@ -124,35 +127,39 @@
   .description {
     @include row;
     align-items: center;
-    justify-content: space-between;
+    font-weight: 700;
+    padding-right: 10px;    
   }
-  .cardCheck {
+  .contenu{
     display: flex;
-    flex: 0%;
-    height: 69px;
-    width: 59px;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: 400ms;
+    height: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+  .cardCheck{
+    display: flex;    
     justify-content: center;
-    color: #f6f6f6;
-    background-color: #99e2d0;
-    white-space: nowrap;
-    border-top-right-radius: 20px 20px;
-    border-bottom-right-radius: 20px 20px;
-  }
-  .fa-solid {    
-    font-weight: 900;
-    font-size: 24px;
-  }
+    align-items: center;
+    background: #99e2d0;
+    color: white;
+    transition: all 400ms;
+    overflow: hidden;
+    height: 69px;
+    width: 0;
+  } 
+  .fa-solid{
+    font-size: 20px;
+  }  
 }
-.contenu{
-  @include column;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  
-
-
+.bisCard:hover .cardCheck{
+  width: 75px;
+  display: flex;
 }
+
 .heartP input {
   display: none;
 }
