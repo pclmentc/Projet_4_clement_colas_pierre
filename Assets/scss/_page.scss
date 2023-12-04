@@ -119,7 +119,6 @@
   }
   p {
     overflow: hidden;
-
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 15px;
@@ -138,8 +137,14 @@
     transition: 400ms;
     height: 100%;
     width: 100%;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;    
   }
+  .plats{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
   .cardCheck{
     display: flex;    
     justify-content: center;
