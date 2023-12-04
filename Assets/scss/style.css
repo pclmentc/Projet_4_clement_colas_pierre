@@ -189,6 +189,11 @@
   width: 100%;
   text-overflow: ellipsis;
 }
+.bisCard .plats {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .bisCard .cardCheck {
   display: flex;
   justify-content: center;
