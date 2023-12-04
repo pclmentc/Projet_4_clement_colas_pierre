@@ -169,7 +169,6 @@
   display: none;
 }
 
-/* :checked + :hover + :before */
 .heartP input:checked + label:hover:before {
   content: "";
   position: absolute;
@@ -178,7 +177,6 @@
   text-align: center;
 }
 
-/* :not(:checked) + :hover + :before */
 .heartP input:not(:checked) + label:hover:before {
   content: "";
   position: absolute;
