@@ -620,6 +620,8 @@ nav input {
   border-radius: 15px;
   background-color: white;
   margin-bottom: 12px;
+  flex: 1;
+  flex-basis: 33%;
 }
 .resto .card p {
   padding-left: 13px;
@@ -643,10 +645,6 @@ nav input {
     align-items: center;
     gap: 50px 100px;
     padding-inline: 180px;
-  }
-  .resto .restoCard a {
-    flex: 1;
-    flex-basis: 33%;
   }
 }
 .resto .new {
@@ -809,4 +807,4 @@ nav input {
   .footer .footer__title {
     padding-inline: 25px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
