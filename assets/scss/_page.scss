@@ -1,0 +1,258 @@
+.body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.conteneurP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .retour {
+    position: absolute;
+    left: 15px;
+    @media screen and (min-width: 1441px) {
+      left: 565px;
+    }
+  }
+}
+.imageIntro {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.entreeHeart {
+  @include column;
+  width: 275px;
+  height: 27px;
+  flex-shrink: 0;
+}
+.entreeHeart h3 {
+  padding-inline: 17px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  animation: effet 1s forwards;
+}
+.entreeHeart h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  opacity: 1;
+  background: #99e2d0;
+  position: absolute;
+  left: 17px;
+  bottom: -7px;
+  animation: effet 2s both;
+}
+
+.encadrement {
+  @include column;
+  position: relative;
+  background-color: #f6f6f6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  top: -43px;
+  gap: 40px;
+  z-index: 2;
+  button {
+    @include button;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .commander {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+}
+.titreHeart {
+  @include row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 32px;
+  @media screen and (min-width: 1440px) {
+    justify-content: center;
+    gap: 24px;
+  }
+  h2 {
+    @include title;
+  }
+}
+.cardBis {
+  @include column;
+  gap: 12px;
+  @media screen and (min-width: 1440px) {
+    padding-inline: 210px;
+  }
+}
+.bisCard { 
+  display: flex; 
+  margin-inline: 13px;
+  padding-left: 15px;
+  border: 1px transparent;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);  
+  height: 69px;
+  overflow: hidden;  
+  animation: effet 3s forwards;
+  gap: 5px;
+  h4 {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;    
+  }
+  .prix {
+    font-weight: 700;
+    text-overflow: inherit;
+  }
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  .description {
+    @include row;
+    align-items: center;
+    font-weight: 700;
+    padding-right: 10px;    
+  }
+  .contenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: 400ms;
+    height: 100%;
+    width: 100%;
+    text-overflow: ellipsis;    
+  }
+  .plats{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .cardCheck{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background: #99e2d0;
+    color: white;
+    transition: all 400ms;
+    overflow: hidden;
+    height: 69px;
+    width: 0;
+  } 
+  .fa-solid{
+    font-size: 20px;
+  }  
+}
+.bisCard:hover .cardCheck{
+  width: 75px;
+  display: flex;
+}
+
+.heartP input {
+  display: none;
+}
+
+.heartP input:checked + label:hover:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  text-align: center;
+}
+
+.heartP input:not(:checked) + label:hover:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  text-align: center;
+}
+
+.heartP input:not(:checked) + label > img.uncheck {
+  display: block;
+}
+.heartP input:checked + label > img.uncheck {
+  display: none;
+}
+.heartP input:not(:checked) + label > img.check {
+  display: none;
+}
+.heartP input:checked + label > img.check {
+  display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  .encadrement {
+    width: 1055px;
+    flex-shrink: 0;
+    margin: 0px 193px;
+    .footer {
+      display: flex;
+      position: relative;
+      align-items: center;
+    }
+  }
+}
+.footerP {
+  @include column;
+  @include footer;
+  position: relative;
+  padding: 25px;
+  padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: -42px;
+  h2 {
+    @include title;
+    margin: 0;
+  }
+  ul {
+    @include column;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    gap: 7px;
+    li {
+      @include row;
+      gap: 11px;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+  @media screen and (min-width: 915px) {
+    flex-direction: row-reverse;
+    gap: 23px;
+    align-items: center;
+    padding: 30px;
+
+    ul {
+      flex-direction: row;
+      gap: 25px;
+    }
+    .footer__title {
+      padding-inline: 25px;
+    }
+  }
+}
