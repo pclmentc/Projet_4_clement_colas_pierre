@@ -1,0 +1,385 @@
+@import "variables";
+@import "mixins";
+@import "page";
+@import "keyframes";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;  
+  max-width: 1440px;
+  margin: auto;
+}
+/**loader**/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000be;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeOut 2s 3s forwards;
+}
+
+.loader {
+  position: relative;
+  width: 135px;
+  height: 135px;
+  right: 5px;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 14px solid transparent;
+  animation: spin 3s linear infinite;
+}
+
+.loader::before {
+  border-top-color: #99e2d0;
+  border-bottom-color: #99e2d0;
+  animation-direction: reverse;
+}
+
+.loader::after {
+  border-top-color: #008766;
+  border-bottom-color: #008766;
+}
+
+.loader .loader-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9356dc;
+  text-align: center;
+  width: 100%;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-decoration: underline;
+}
+/**fin loader**/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  @include font;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+  .exemple {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    @media screen and (min-width: 1440px) {
+      height: 488px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+header {
+  @include column;
+  @include center;
+  #Logo {
+    margin-top: 14px;
+    margin-bottom: 13px;
+    @media (min-width: 915px) {
+      margin-top: 30px;
+      margin-bottom: 32px;
+    }
+  }
+}
+.page {
+  @include row;
+  background-color: white;
+  #LogoP {
+    margin-top: 14px;
+    margin-bottom: 13px;
+    @media screen and (min-width: 1440px) {
+      margin-block: 30px;
+    }
+  }
+}
+nav {
+  @include row;
+  @include center;
+  gap: 17px;
+  @include grey;
+  height: 50px;
+  input {
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    color: var(--Grey, #353535);
+  }
+}
+.reservation {
+  @include column;
+  @include fond;
+  @include center;
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 57px;
+
+  h1 {
+    width: 100%;
+    height: 68px;
+    flex-shrink: 0;
+  }
+
+  p {
+    width: 100%;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  button {
+    @include button;
+    cursor: pointer;
+  }
+}
+
+.fonction {
+  @include column;
+
+  box-sizing: border-box;
+  h2 {
+    padding-top: 48px;
+    padding-left: 20px;
+    margin: 0;
+    padding-bottom: 1px;
+  }
+  ul {
+    @include column;
+    gap: 25px;
+    padding: 25px;
+    padding-bottom: 68px;
+    margin: 0;
+    .contenant {
+      position: relative;
+      height: 24px;
+      right: 12px;
+    }
+    .text {
+      position: absolute;
+      color: white;
+      top: 3px;
+      left: 6px;
+    }
+    li {
+      gap: 24px;
+      @include row;
+      @include fond;
+      border-radius: 20px;
+      height: 72px;
+      flex-shrink: 0;
+      align-items: center;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+.resto {
+  gap: 6px;
+  padding: 18px;
+  padding-bottom: 48px;
+  @include column;
+  @include fond;
+  @media screen and (min-width: 915px) {
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    @media screen and (min-width: 915px) {
+      padding-left: 13%;
+    }
+  }
+  h3 {
+    padding-left: 13px;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 16px;
+  }
+  p {
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 12px;
+  }
+  .card {
+    @include card;
+    background-color: white;
+    margin-bottom: 12px;    
+    flex: 1;
+    flex-basis: 33%;
+    
+  }
+  .restoCard {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 915px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px 100px;
+      padding-inline: 180px;
+      // a {
+      //   flex: 1;
+      //   flex-basis: 33%;
+      // }
+    }
+  }
+  .new {
+    @include new;
+    position: absolute;
+  }
+  .heart {
+    position: absolute;
+    bottom: 27px;
+    left: 86%;
+
+    @media screen and (min-width: 915px) {
+      bottom: 32px;
+      left: 89%;
+    }
+  }
+  .heart input {
+    display: none;    
+  }  
+  .heart input:checked + label:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 21px;
+    line-height: 100px;
+    text-align: center;
+      
+  }  
+  .heart input:not(:checked) + label:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 21px;
+    line-height: 100px;
+    text-align: center; 
+      
+  }
+
+  .heart input:not(:checked) + label > img.uncheck {
+    display: block;
+  }
+  .heart input:checked + label > img.uncheck {
+    display: none;
+  }
+  .heart input:not(:checked) + label > img.check {
+    display: none;
+  }
+  .heart input:checked + label > img.check {
+    display: block;
+  }
+}
+
+.footer {
+  @include column;
+  @include footer;
+  padding: 25px;
+  padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  @media screen and (min-width: 1023px) {
+  }
+
+  h2 {
+    @include title;
+    margin: 0;
+  }
+  ul {
+    @include column;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    gap: 7px;
+    li {
+      @include row;
+      gap: 11px;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}
+@media screen and (min-width: 915px) {
+  .reservation h1 {
+    font-size: 40px;
+  }
+  .fonction {
+    padding-left: 180px;
+  }
+  .fonction ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 37px;
+  }
+
+  .fonction li {
+    width: 25%;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    gap: 23px;
+    align-items: center;
+    padding: 30px;
+
+    ul {
+      flex-direction: row;
+      gap: 25px;
+    }
+    .footer__title {
+      padding-inline: 25px;
+    }
+  }
+}

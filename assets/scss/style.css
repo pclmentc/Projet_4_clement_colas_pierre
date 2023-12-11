@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.imgcard {
+  box-sizing: border-box;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 231px;
+  flex-shrink: 0;
+  border: 0 solid transparent;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.conteneurP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.conteneurP .retour {
+  position: absolute;
+  left: 15px;
+}
+@media screen and (min-width: 1441px) {
+  .conteneurP .retour {
+    left: 565px;
+  }
+}
+
+.imageIntro {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.entreeHeart {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.entreeHeart h3 {
+  padding-inline: 17px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  animation: effet 1s forwards;
+}
+
+.entreeHeart h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  opacity: 1;
+  background: #99e2d0;
+  position: absolute;
+  left: 17px;
+  bottom: -7px;
+  animation: effet 2s both;
+}
+
+.encadrement {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f6f6f6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  top: -43px;
+  gap: 40px;
+  z-index: 2;
+}
+.encadrement button {
+  margin-top: 27px;
+  width: 218px;
+  height: 50px;
+  flex-shrink: 0;
+  font-size: 16px;
+  border-radius: 25px;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: 0;
+  color: white;
+  transition: 300ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.encadrement button:hover {
+  filter: brightness(1.35);
+}
+.encadrement .commander {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.titreHeart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .titreHeart {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+.titreHeart h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.cardBis {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .cardBis {
+    padding-inline: 210px;
+  }
+}
+
+.bisCard {
+  display: flex;
+  margin-inline: 13px;
+  padding-left: 15px;
+  border: 1px transparent;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  height: 69px;
+  overflow: hidden;
+  animation: effet 3s forwards;
+  gap: 5px;
+}
+.bisCard h4 {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+}
+.bisCard .prix {
+  font-weight: 700;
+  text-overflow: inherit;
+}
+.bisCard p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+.bisCard .description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  padding-right: 10px;
+}
+.bisCard .contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: 400ms;
+  height: 100%;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.bisCard .plats {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bisCard .cardCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99e2d0;
+  color: white;
+  transition: all 400ms;
+  overflow: hidden;
+  height: 69px;
+  width: 0;
+}
+.bisCard .fa-solid {
+  font-size: 20px;
+}
+
+.bisCard:hover .cardCheck {
+  width: 75px;
+  display: flex;
+}
+
+.heartP input {
+  display: none;
+}
+
+.heartP input:checked + label:hover:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  text-align: center;
+}
+
+.heartP input:not(:checked) + label:hover:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  text-align: center;
+}
+
+.heartP input:not(:checked) + label > img.uncheck {
+  display: block;
+}
+
+.heartP input:checked + label > img.uncheck {
+  display: none;
+}
+
+.heartP input:not(:checked) + label > img.check {
+  display: none;
+}
+
+.heartP input:checked + label > img.check {
+  display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  .encadrement {
+    width: 1055px;
+    flex-shrink: 0;
+    margin: 0px 193px;
+  }
+  .encadrement .footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+}
+.footerP {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #f6f6f6;
+  position: relative;
+  padding: 25px;
+  padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: -42px;
+}
+.footerP h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+.footerP ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  gap: 7px;
+}
+.footerP ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+.footerP ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (min-width: 915px) {
+  .footerP {
+    flex-direction: row-reverse;
+    gap: 23px;
+    align-items: center;
+    padding: 30px;
+  }
+  .footerP ul {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .footerP .footer__title {
+    padding-inline: 25px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes effet {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/**loader**/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7450980392);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeOut 2s 3s forwards;
+}
+
+.loader {
+  position: relative;
+  width: 135px;
+  height: 135px;
+  right: 5px;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 14px solid transparent;
+  animation: spin 3s linear infinite;
+}
+
+.loader::before {
+  border-top-color: #99e2d0;
+  border-bottom-color: #99e2d0;
+  animation-direction: reverse;
+}
+
+.loader::after {
+  border-top-color: #008766;
+  border-bottom-color: #008766;
+}
+
+.loader .loader-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9356dc;
+  text-align: center;
+  width: 100%;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-decoration: underline;
+}
+
+/**fin loader**/
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  margin: 0;
+}
+body p {
+  font-size: 18px;
+  margin: 0;
+}
+body .exemple {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1440px) {
+  body .exemple {
+    height: 488px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header #Logo {
+  margin-top: 14px;
+  margin-bottom: 13px;
+}
+@media (min-width: 915px) {
+  header #Logo {
+    margin-top: 30px;
+    margin-bottom: 32px;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.page #LogoP {
+  margin-top: 14px;
+  margin-bottom: 13px;
+}
+@media screen and (min-width: 1440px) {
+  .page #LogoP {
+    margin-block: 30px;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: var(--Grey-2, #eaeaea);
+  height: 50px;
+}
+nav input {
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  color: var(--Grey, #353535);
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 57px;
+}
+.reservation h1 {
+  width: 100%;
+  height: 68px;
+  flex-shrink: 0;
+}
+.reservation p {
+  width: 100%;
+  height: 46px;
+  flex-shrink: 0;
+}
+.reservation button {
+  margin-top: 27px;
+  width: 218px;
+  height: 50px;
+  flex-shrink: 0;
+  font-size: 16px;
+  border-radius: 25px;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: 0;
+  color: white;
+  transition: 300ms;
+  cursor: pointer;
+}
+.reservation button:hover {
+  filter: brightness(1.35);
+}
+
+.fonction {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.fonction h2 {
+  padding-top: 48px;
+  padding-left: 20px;
+  margin: 0;
+  padding-bottom: 1px;
+}
+.fonction ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  padding-bottom: 68px;
+  margin: 0;
+}
+.fonction ul .contenant {
+  position: relative;
+  height: 24px;
+  right: 12px;
+}
+.fonction ul .text {
+  position: absolute;
+  color: white;
+  top: 3px;
+  left: 6px;
+}
+.fonction ul li {
+  gap: 24px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  height: 72px;
+  flex-shrink: 0;
+  align-items: center;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.resto {
+  gap: 6px;
+  padding: 18px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 915px) {
+  .resto {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 915px) {
+  .resto h2 {
+    padding-left: 13%;
+  }
+}
+.resto h3 {
+  padding-left: 13px;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 16px;
+}
+.resto p {
+  font-size: 17px;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+.resto .card {
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 12px;
+  flex: 1;
+  flex-basis: 33%;
+}
+.resto .card p {
+  padding-left: 13px;
+}
+.resto .card button {
+  border: 0;
+  background-color: white;
+  position: relative;
+  left: 85%;
+  bottom: 46px;
+  cursor: pointer;
+}
+.resto .restoCard {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 915px) {
+  .resto .restoCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px 100px;
+    padding-inline: 180px;
+  }
+}
+.resto .new {
+  display: flex;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  left: 71%;
+  top: 5%;
+  position: absolute;
+}
+@media screen and (min-width: 424px) {
+  .resto .new {
+    left: 86%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .resto .new {
+    left: 75%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .resto .new {
+    left: 87%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .resto .new {
+    left: 64%;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .resto .new {
+    left: 79%;
+  }
+}
+@media screen and (min-width: 1445px) {
+  .resto .new {
+    left: 79%;
+  }
+}
+.resto .heart {
+  position: absolute;
+  bottom: 27px;
+  left: 86%;
+}
+@media screen and (min-width: 915px) {
+  .resto .heart {
+    bottom: 32px;
+    left: 89%;
+  }
+}
+.resto .heart input {
+  display: none;
+}
+.resto .heart input:checked + label:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 21px;
+  line-height: 100px;
+  text-align: center;
+}
+.resto .heart input:not(:checked) + label:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 21px;
+  line-height: 100px;
+  text-align: center;
+}
+.resto .heart input:not(:checked) + label > img.uncheck {
+  display: block;
+}
+.resto .heart input:checked + label > img.uncheck {
+  display: none;
+}
+.resto .heart input:not(:checked) + label > img.check {
+  display: none;
+}
+.resto .heart input:checked + label > img.check {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #f6f6f6;
+  padding: 25px;
+  padding-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+}
+.footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  gap: 7px;
+}
+.footer ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+.footer ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+@media screen and (min-width: 915px) {
+  .reservation h1 {
+    font-size: 40px;
+  }
+  .fonction {
+    padding-left: 180px;
+  }
+  .fonction ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 37px;
+  }
+  .fonction li {
+    width: 25%;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    gap: 23px;
+    align-items: center;
+    padding: 30px;
+  }
+  .footer ul {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .footer .footer__title {
+    padding-inline: 25px;
+  }
+}
