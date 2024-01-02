@@ -174,6 +174,10 @@ nav {
     cursor: pointer;
   }
 }
+.fonction li:hover i {
+  color: #9356DC; /* Couleur violette au survol */
+  
+}
 
 .fonction {
   @include column;
@@ -202,6 +206,9 @@ nav {
       top: 3px;
       left: 6px;
     }
+    .fa-solid{
+      color: #4e4e4e;
+    }
     li {
       gap: 24px;
       @include row;
@@ -211,7 +218,11 @@ nav {
       flex-shrink: 0;
       align-items: center;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    }
+       i {
+        transition: color 0.3s ease, transform 0.3s ease; /* Ajout de transitions pour un effet en douceur */
+      }
+    } 
+   
   }
 }
 .resto {
